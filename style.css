@@ -1,10 +1,12 @@
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 .youtube__wrap {
   display: flex;
   min-height: 100vh;
+  background-color: #181818;
 }
 
 /* sidebar is about 15% */
@@ -12,14 +14,80 @@ body {
 .youtube__sidebar {
   width: 13vw;
   background-color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+position: fixed;
+}
+
+h1 {
+  color: white;
+  font-size: 45px;
+}
+
+.sidebar__section {
+  width: 100%;
+  border-bottom: 0.5px solid rgb(92, 92, 92);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sidebar__element {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  align-items: center;
+
+  padding: 5px;
+  padding-left: 20px;
+
+  font-size: 15px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.highlight {
+  background-color: #4d4d4d;
+}
+
+.sidebar__icon {
+  width: 35px;
+  height: 35px;
+  color: white;
+  fill: white;
+}
+
+.sidebar__text {
+  color: white;
 }
 
 .youtube__main {
-  width: 87vw;
-  height: calc(100vh - 100px);
+  width: 87%;
 
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 15px;
+  flex-wrap: wrap;
   align-self: flex-end;
 
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 30px;
+
+  box-sizing: border-box;
+
+  position: absolute; /* fixed prevents scrolling */
+  top: 100px;
+  left: 13vw;
   background-color: #181818;
 }
 
@@ -27,16 +95,18 @@ body {
   position: fixed;
   right: 0;
 
-  width: 87vw;
+  width: 87%;
   height: 100px;
 
   background-color: #202020;
 
   border-bottom: 0.5px solid rgb(92, 92, 92);
+
+  z-index: 2;
 }
 
 .youtube__card {
-  width: 25%;
+  width: 24%;
   min-width: 300px;
   height: 300px;
 
@@ -45,9 +115,6 @@ body {
 
 .youtube__card--description {
   background-color: transparent;
-
-  /* width: 100%; */
-  height: 30%;
 
   display: flex;
 

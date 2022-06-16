@@ -12,7 +12,8 @@ body {
 /* sidebar is about 15% */
 
 .youtube__sidebar {
-  width: 13vw;
+  width: 250px;
+  min-height: 100vh;
   background-color: #202020;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -20,12 +21,12 @@ body {
   flex-direction: column;
   align-items: center;
 
-position: fixed;
+  position: fixed;
 }
 
-h1 {
-  color: white;
-  font-size: 45px;
+.youtube__logo {
+  width: 50%;
+  margin: 25px;
 }
 
 .sidebar__section {
@@ -52,13 +53,22 @@ h1 {
   box-sizing: border-box;
 }
 
-.highlight {
+.sidebar__element:hover {
   background-color: #4d4d4d;
 }
 
+.highlight {
+  background-color: #4d4d4d;
+  font-weight: bold;
+}
+
+.highlight:hover {
+  background-color: #949494;
+}
+
 .sidebar__icon {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   color: white;
   fill: white;
 }
@@ -87,13 +97,13 @@ h1 {
 
   position: absolute; /* fixed prevents scrolling */
   top: 100px;
-  left: 13vw;
+  left: 250px;
   background-color: #181818;
 }
 
 .youtube__nav {
   position: fixed;
-  right: 0;
+  left: 250px;
 
   width: 87%;
   height: 100px;
@@ -107,7 +117,7 @@ h1 {
 
 .youtube__card {
   width: 24%;
-  min-width: 300px;
+  min-width: 350px;
   height: 300px;
 
   position: relative;
